@@ -1,7 +1,3 @@
-# \# ongeziwecwesi.github.io
-
-# 
-
 # My personal site: projects, experience and CV. Live at https://ongeziwecwesi.github.io
 
 # 
