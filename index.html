@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ongeziwe Cwesi · Software Developer</title>
+  <meta name="description" content="Ongeziwe Cwesi, software developer from the Eastern Cape, South Africa. Projects in Python, Java and C#.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="mark" href="#">Ongeziwe Cwesi</a>
+      <nav aria-label="Sections">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="Ongeziwe-Cwesi-CV.pdf">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="wrap intro-inner">
+        <img class="photo" src="ongeziwe.jpg" width="240" height="240" alt="Ongeziwe Cwesi">
+        <div>
+        <p class="eyebrow">Software developer · Eastern Cape, South Africa</p>
+        <h1>Ongeziwe Cwesi</h1>
+        <p class="lead">
+          I build practical software for people who are usually left out of the design:
+          rural schools, places with poor signal, and speakers of African languages.
+          I work mostly in Python, Java and C#, and I'm finishing an MSc in Computer Science
+          at the University of Fort Hare.
+        </p>
+        <ul class="links">
+          <li><a href="https://github.com/ongeziwecwesi">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/ongeziwe-cwesi/">LinkedIn</a></li>
+          <li><a href="mailto:ongeziwecwesi@gmail.com">ongeziwecwesi@gmail.com</a></li>
+          <li><a class="cv" href="Ongeziwe-Cwesi-CV.pdf">Download CV (PDF)</a></li>
+        </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="block">
+      <div class="wrap">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>isiXhosa Tech Glossary</h3>
+            <p class="stack">Python · FastAPI · PostgreSQL</p>
+          </div>
+          <p>
+            A searchable list of computing terms in English and isiXhosa, with a website and a REST API.
+            You can search in either language, and the closest matches come first. Anyone can suggest a new
+            term or a better translation, and it only goes live after it's been reviewed.
+          </p>
+          <p class="detail">
+            It runs on Render with a Neon PostgreSQL database. The tests run against both SQLite and PostgreSQL
+            on every push, and the site only deploys if they pass.
+          </p>
+          <p class="project-links">
+            <a href="https://isixhosa-tech-glossary.onrender.com/">Live site</a>
+            <a href="https://github.com/ongeziwecwesi/isixhosa-tech-glossary">Code</a>
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Stokvel Manager</h3>
+            <p class="stack">Java · Spring Boot · PostgreSQL</p>
+          </div>
+          <p>
+            An API for running a stokvel, a rotating savings group. It tracks each member's contributions,
+            whose turn it is to be paid, and who is in arrears, and it produces a statement per member.
+            A payout is blocked until everyone has paid for that round.
+          </p>
+          <p class="detail">
+            Database changes are versioned with Flyway, money is stored as exact decimals, and errors come back
+            in a standard format. Integration tests run against H2 and PostgreSQL in CI.
+          </p>
+          <p class="project-links">
+            <a href="https://github.com/ongeziwecwesi/stokvel-manager">Code</a>
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Offline School Register</h3>
+            <p class="stack">C# · ASP.NET Core · EF Core · JavaScript</p>
+          </div>
+          <p>
+            An attendance register for schools with unreliable signal. Teachers mark learners on their phone
+            with or without a connection, and the changes sync when signal comes back. Several teachers can
+            mark the same class and their phones end up agreeing.
+          </p>
+          <p class="detail">
+            The app and its data stay on the phone (service worker and IndexedDB). The sync API is safe to
+            retry, the newest tap wins when two phones disagree, and each phone only downloads what changed
+            since its last sync.
+          </p>
+          <p class="project-links">
+            <a href="https://github.com/ongeziwecwesi/offline-school-register">Code</a>
+          </p>
+        </article>
+
+        <article class="project research">
+          <div class="project-head">
+            <h3>Master's research: climate-smart learning</h3>
+            <p class="stack">Python · Flask · scikit-learn</p>
+          </div>
+          <p>
+            A web app that recommends climate change learning modules to high school learners in the rural
+            Eastern Cape. A Random Forest model uses each learner's school profile and what their families deal
+            with at home, such as drought, floods and farming. Every topic page is in English and isiXhosa.
+          </p>
+          <p class="detail">The code is private while the dissertation is being reviewed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="block">
+      <div class="wrap">
+        <h2>Experience</h2>
+
+        <div class="role">
+          <div class="when">Mar 2026 – present</div>
+          <div>
+            <h3>Computer Science Tutor <span>University of Fort Hare</span></h3>
+            <p>I run Java and Python practicals for about 90 students a session and help them debug their code one-on-one.</p>
+          </div>
+        </div>
+
+        <div class="role">
+          <div class="when">Apr – Sep 2026</div>
+          <div>
+            <h3>Business Analysis Mentor <span>PAICTA</span></h3>
+            <p>I mentored 30 learners in requirements gathering and process modelling, and reviewed their BRDs, use cases and process maps.</p>
+          </div>
+        </div>
+
+        <div class="role">
+          <div class="when">Feb 2025 – Jan 2026</div>
+          <div>
+            <h3>BI and Data Analytics Graduate <span>Sambe Consulting</span></h3>
+            <p>
+              I built a Power Apps and Power Automate timesheet app that cut HR's processing time from three days
+              to under an hour. I also set up GitHub Actions pipelines that deploy databases across environments,
+              built SSIS pipelines into SQL Server, and made Power BI dashboards for HR.
+            </p>
+          </div>
+        </div>
+
+        <div class="role">
+          <div class="when">2023 and 2024</div>
+          <div>
+            <h3>Computer Literacy Tutor <span>University of Fort Hare</span></h3>
+            <p>I taught Microsoft Office and computer basics to first-year Commerce and Agriculture students.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="block">
+      <div class="wrap two-col">
+        <div>
+          <h2>Education</h2>
+          <div class="edu">
+            <h3>MSc Computer Science</h3>
+            <p class="meta">University of Fort Hare · expected 2027</p>
+            <p>Random Forest-based personalised climate-smart learning for rural Eastern Cape high schools.</p>
+          </div>
+          <div class="edu">
+            <h3>BSc Honours in Computer Science</h3>
+            <p class="meta">University of Fort Hare · 2024</p>
+            <p>Keeping voice activation data confidential in smart homes for people living with disabilities.</p>
+          </div>
+          <div class="edu">
+            <h3>BSc Mathematics and Computer Science</h3>
+            <p class="meta">University of Fort Hare · 2023</p>
+          </div>
+        </div>
+        <div>
+          <h2>Certifications</h2>
+          <ul class="certs">
+            <li>Microsoft Certified: Azure AI Engineer Associate (AI-102)</li>
+            <li>Microsoft Certified: Azure Developer Associate (AZ-204)</li>
+            <li>Oracle Cloud Infrastructure AI Foundations Associate</li>
+          </ul>
+          <h2 class="spaced">Tools</h2>
+          <p class="tools">
+            Python, Java, C#, SQL, JavaScript, FastAPI, Flask, Spring Boot, ASP.NET Core, PostgreSQL,
+            SQL Server, GitHub Actions, Azure, Power BI, Power Platform, scikit-learn
+          </p>
+          <h2 class="spaced">Languages</h2>
+          <p class="tools">isiXhosa and English</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <p>Ongeziwe Cwesi · <a href="mailto:ongeziwecwesi@gmail.com">ongeziwecwesi@gmail.com</a></p>
+      <p><a href="https://github.com/ongeziwecwesi/ongeziwecwesi.github.io">Source for this site</a></p>
+    </div>
+  </footer>
+</body>
+</html>
